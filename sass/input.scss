@@ -1,0 +1,106 @@
+$primary-color: #004A8F;
+$primary-color-light: #4267A3;
+$font-color-light:#e3e3e3;
+
+$top-margin-offset: 47px;
+
+/* GLOBAL FONT SMOOTHING */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Global Page Settings */
+#PageBody {
+    background-color: #ebebeb;
+    text-align: center;
+    margin-top: ($top-margin-offset - 1px);
+}
+
+/* TOP TOOL BAR AND SEARCH */
+#itoolbar_bg {
+     background-color: $primary-color;
+     min-height: $top-margin-offset;
+}
+.toolbar-out {
+    background-color: $primary-color;
+    position: fixed;
+    top: 0;
+    left: 1px;
+    width: 100vw;
+    z-index: 1000000;
+}
+
+#itoolbar a:hover {
+    color:#63CADF;
+}
+
+#isearch .form-control {
+    border: none;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    color:$font-color-light;
+}
+
+#isearch .input-group {
+    margin-top: 4px;
+    padding: 0.5em;
+}
+
+#QuickSearchForm button {
+    background:transparent;
+}
+#isearch .btn {
+    padding: 3px 10px;
+    border: none;
+    color: $font-color-light;
+}
+
+#itoolbar {
+    position: relative;
+    color: $font-color-light;
+    top: 7px;
+}
+
+/* SIGN IN FORM, LOGIN FORM */
+.formbutton {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em;
+}
+
+
+
+/* NAV BAR */
+.navbar-collapse {
+    background-color: $primary-color;
+}
+.nav li {
+    border-bottom:6px solid $primary-color;
+}
+.nav li:hover {
+    border-bottom:6px solid #63CADF;
+}
+#mainmenu a {
+    color:#ffffff;
+    text-decoration: none;
+}
+#mainmenu a:hover {
+    background-color:$primary-color-light;
+}
+.navbar-toggle {
+    background-color:transparent;
+}
+
+
+
+
+@media (max-width: 600px) {
+	#PageBody {
+	    margin-top: 74px;
+	}
+}
