@@ -67,6 +67,9 @@
 .nav li:hover {
   border-bottom: 6px solid #63CADF; }
 
+.mainmenu-out {
+  background-color: transparent; }
+
 #mainmenu a {
   color: #ffffff;
   text-decoration: none; }
@@ -75,6 +78,24 @@
   background-color: #4267A3; }
 
 .navbar-toggle {
+  background-color: transparent; }
+
+/* HOME PAGE CONTENT */
+.irailhead {
+  background-color: transparent;
+  height: 32px;
+  line-height: 53px;
+  font-size: 1.5em; }
+
+/* PAGE CONTENT */
+#hp-main .content, #hp-main p {
+  text-align: left;
+  color: #004A8F;
+  line-height: 1.5em;
+  font-size: 1.1em; }
+#hp-main .login {
+  background-color: #004A8F; }
+#hp-main .zone {
   background-color: transparent; }
 
 @media (max-width: 600px) {

@@ -12,12 +12,21 @@ $top-margin-offset: 47px;
 }
 
 
+
+
+
+
 /* Global Page Settings */
 #PageBody {
     background-color: #ebebeb;
     text-align: center;
     margin-top: ($top-margin-offset - 1px);
 }
+
+
+
+
+
 
 /* TOP TOOL BAR AND SEARCH */
 #itoolbar_bg {
@@ -75,6 +84,9 @@ $top-margin-offset: 47px;
 
 
 
+
+
+
 /* NAV BAR */
 .navbar-collapse {
     background-color: $primary-color;
@@ -84,6 +96,9 @@ $top-margin-offset: 47px;
 }
 .nav li:hover {
     border-bottom:6px solid #63CADF;
+}
+.mainmenu-out {
+	background-color:transparent;
 }
 #mainmenu a {
     color:#ffffff;
@@ -97,6 +112,41 @@ $top-margin-offset: 47px;
 }
 
 
+
+
+
+
+
+
+/* HOME PAGE CONTENT */
+.irailhead {
+    background-color: transparent;
+    height: 32px;
+    line-height: 53px;
+    font-size: 1.5em;
+}
+
+
+
+
+
+/* PAGE CONTENT */
+#hp-main {
+
+    .content, p {
+        text-align:left;
+        color: $primary-color;
+        line-height: 1.5em;
+	    font-size: 1.1em;
+    }
+    .login {
+    	background-color: $primary-color;
+    }
+    .zone {
+    	background-color:transparent;
+    }
+
+}
 
 
 @media (max-width: 600px) {
