@@ -6,9 +6,69 @@
 
 /* Global Page Settings */
 #PageBody {
-  background-color: #ebebeb;
-  text-align: center;
   margin-top: 46px; }
+
+.login {
+  background-color: #004A8F; }
+  .login a, .login label {
+    color: #fff; }
+
+.irailhead, h3 {
+  background-color: transparent;
+  font-weight: bold; }
+
+#right .irailhead {
+  color: #000000; }
+
+.bottom-left-out .irailhead, .bottom-left-out h3 {
+  color: #ffffff; }
+
+/* SIGN IN FORM, LOGIN FORM */
+.formbutton {
+  background-color: #E79824;
+  color: #fff;
+  text-align: center;
+  padding: 1em 2em;
+  font-weight: bold; }
+
+.FormTable1 td {
+  text-align: left;
+  font-size: 1.2em; }
+  .FormTable1 td input, .FormTable1 td select {
+    background: #fff;
+    border: medium none;
+    border-radius: 0;
+    color: #999;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0 15px;
+    width: 100%; }
+
+/* SECONDARY PAGE */
+#right #login {
+  background-color: #004A8F; }
+  #right #login .irailhead, #right #login label, #right #login a {
+    color: #ffffff; }
+#right #news {
+  background-color: #64A24C; }
+  #right #news .irailhead, #right #news .irailcontent {
+    color: #ffffff; }
+#right #calendar {
+  background-color: #63CADF; }
+  #right #calendar .irailhead, #right #calendar .irailcontent, #right #calendar a {
+    color: #004A8F; }
+
+#SpNavBar {
+  background-color: transparent; }
+  #SpNavBar img {
+    margin-right: 5px;
+    position: relative;
+    top: 4px; }
+
+.ViewTable1 th {
+  background-color: transparent; }
 
 /* TOP TOOL BAR AND SEARCH */
 #itoolbar_bg {
@@ -21,7 +81,8 @@
   top: 0;
   left: 1px;
   width: 100vw;
-  z-index: 1000000; }
+  z-index: 1000000;
+  box-shadow: 0px -1px 6px #000; }
 
 #itoolbar a:hover {
   color: #63CADF; }
@@ -50,53 +111,58 @@
   color: #e3e3e3;
   top: 7px; }
 
-/* SIGN IN FORM, LOGIN FORM */
-.formbutton {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 1em 2em; }
-
 /* NAV BAR */
-.navbar-collapse {
+.navbar-collapse, .dropdown-menu {
   background-color: #004A8F; }
 
 .nav li {
   border-bottom: 6px solid #004A8F; }
-
 .nav li:hover {
   border-bottom: 6px solid #63CADF; }
 
-.mainmenu-out {
+.mainmenu-out, .navbar-toggle {
   background-color: transparent; }
 
 #mainmenu a {
+  font-weight: bold;
+  text-transform: uppercase;
   color: #ffffff;
   text-decoration: none; }
-
 #mainmenu a:hover {
   background-color: #4267A3; }
+#mainmenu .caret {
+  display: none; }
 
-.navbar-toggle {
-  background-color: transparent; }
-
-/* HOME PAGE CONTENT */
-.irailhead {
-  background-color: transparent;
-  height: 32px;
-  line-height: 53px;
-  font-size: 1.5em; }
+.dropdown-menu {
+  text-align: left;
+  padding: 0;
+  top: 5px; }
 
 /* PAGE CONTENT */
 #hp-main .content, #hp-main p {
   text-align: left;
-  color: #004A8F;
   line-height: 1.5em;
   font-size: 1.1em; }
-#hp-main .login {
-  background-color: #004A8F; }
-#hp-main .zone {
+#hp-main .content p {
+  color: #666; }
+#hp-main .zone, #hp-main .irailhead {
   background-color: transparent; }
+#hp-main .irailhead {
+  font-size: 1.5em;
+  line-height: 56px; }
+#hp-main .calendar {
+  background-color: #ffffff;
+  box-shadow: 2px 5px 4px rgba(37, 37, 37, 0.36); }
+  #hp-main .calendar .irailhead {
+    color: #004A8F; }
+#hp-main .bottom-left-out {
+  background-color: #64A24C;
+  position: relative;
+  bottom: 15px; }
+  #hp-main .bottom-left-out p, #hp-main .bottom-left-out a {
+    color: #ffffff; }
+#hp-main #news a {
+  font-size: 0.7em; }
 
 @media (max-width: 600px) {
   #PageBody {
