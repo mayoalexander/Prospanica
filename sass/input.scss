@@ -1,12 +1,22 @@
+/* COLORS */
+$background_color:#ffffff;
 $primary-color: #004A8F;
 $primary-color-light: #4267A3;
 $font-color-light:#e3e3e3;
-
 $secondary_green:#64A24C;
 $secondary_blue:#63CADF;
 $secondary_gold:#E79824;
+$secondary_gold_light:#EDAF59;
+$secondary_pink:#DD1A5D;
+$paragraph_color_dark:#666;
 
+/* MARGINS */
 $top-margin-offset: 47px;
+
+
+/* Google Font Library */
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
 
 /* GLOBAL FONT SMOOTHING */
 * {
@@ -19,9 +29,23 @@ $top-margin-offset: 47px;
 
 
 
+* {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
 
-/* Global Page Settings */
+/*
+ *
+ *
+ *
+ *
+ Global Page Settings
+ *
+ *
+ *
+ *
+ */
 #PageBody {
+    background-color:#fff;
     margin-top: ($top-margin-offset - 1px);
 }
 
@@ -47,27 +71,74 @@ $top-margin-offset: 47px;
 /* SIGN IN FORM, LOGIN FORM */
 .formbutton {
     background-color: $secondary_gold;
+    border:none;
     color: #fff;
+    height:inherit;
     text-align: center;
     padding: 1em 2em;
     font-weight: bold;
 }
+.formbutton:hover {
+    background-color:$secondary_gold_light;
+}
+
 .FormTable1 td {
     text-align: left;
     font-size:1.2em;
+    padding: 1em 2em;
     input, select {
-        background: #fff;
-        border: medium none;
-        border-radius: 0;
-        color: #999;
-        font-size: 13px;
         height: 32px;
+    }
+    input, select, textarea {
+        background: #fff;
+        border: 1px solid #e3e3e3;
+        border-radius: 0;
+        color: $paragraph_color_dark;
+        font-size: 13px;
         line-height: 32px;
         margin: 0;
         padding: 0 15px;
         width: 100%;
     }
+    .formbutton {
+        @extend .formbutton;
+    }
+    #rememberme {
+        display:inline;
+        width:inherit;
+        height:inherit;
+    }
 }
+.redalert {
+    display:inline-block;
+    color:$secondary_pink;
+    border-radius:1px;
+    li {
+        list-style-type: none;
+    }
+}
+
+#SpTitleBar {
+    background-color:$background_color;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color:$secondary_blue;
+}
+/*
+ *
+ *
+ *
+ *
+ Global Page Settings
+ *
+ *
+ *
+ *
+ */
 
 
 
@@ -86,18 +157,18 @@ $top-margin-offset: 47px;
     }
     #news {
         background-color:$secondary_green;
-        .irailhead, .irailcontent {
+        .irailhead, .irailcontent, a {
             color:#ffffff;
         }
+        a:hover {
+            color:$secondary_blue;
+            }
     }
     #calendar {
         background-color:$secondary_blue;
         .irailhead, .irailcontent, a {
             color:$primary-color;
         }
-        // a {
-        //     color:#ffffff;
-        // }
     }
 
 }
@@ -110,8 +181,13 @@ $top-margin-offset: 47px;
         top: 4px;
     }
 }
-.ViewTable1 th {
+.ViewTable1 th, .calloutbox, .infobox {
     background-color:transparent;
+}
+.FormTable1 {
+    width:454px;
+    display: block;
+    margin: auto;
 }
 
 
@@ -176,6 +252,10 @@ $top-margin-offset: 47px;
 
 
 
+
+
+
+
 /* NAV BAR */
 .navbar-collapse, .dropdown-menu {
     background-color: $primary-color;
@@ -186,6 +266,9 @@ $top-margin-offset: 47px;
     }
     li:hover {
         border-bottom:6px solid $secondary_blue;
+    }
+    li, a {
+        transition: background-color 0.25s, border-color 0.25s;
     }
 }
 .mainmenu-out, .navbar-toggle {
@@ -211,6 +294,9 @@ $top-margin-offset: 47px;
     // position:relative;
     top: 5px;
 }
+.navbar-collapse {
+    padding:0px;
+}
 
 
 
@@ -229,10 +315,11 @@ $top-margin-offset: 47px;
 	    font-size: 1.1em;
     }
     .content p {
-        color:#666;
+        font-family: 'PT Sans Narrow', sans-serif;
+        color:$paragraph_color_dark;
     }
 
-    .zone, .irailhead {
+    .zone, .irailhead, #bottomcontentarea {
     	background-color:transparent;
     }
     .irailhead {
@@ -254,15 +341,23 @@ $top-margin-offset: 47px;
             color:#ffffff;
         }
     }
-    #news a {
-        font-size: 0.7em;
+    #news {
+        .irailcontent {
+            color:#ffffff;
+        }
+        a {
+            font-size: 0.7em;
+        }
     }
 
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 769px) {
 	#PageBody {
 	    margin-top: 74px;
 	}
+    .FormTable1 {
+        width:225px;
+    }
 }

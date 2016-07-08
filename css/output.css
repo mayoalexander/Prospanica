@@ -1,11 +1,29 @@
+/* COLORS */
+/* MARGINS */
+/* Google Font Library */
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
 /* GLOBAL FONT SMOOTHING */
 * {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* Global Page Settings */
+* {
+  font-family: 'PT Sans Narrow', sans-serif; }
+
+/*
+ *
+ *
+ *
+ *
+ Global Page Settings
+ *
+ *
+ *
+ *
+ */
 #PageBody {
+  background-color: #fff;
   margin-top: 46px; }
 
 .login {
@@ -24,28 +42,67 @@
   color: #ffffff; }
 
 /* SIGN IN FORM, LOGIN FORM */
-.formbutton {
+.formbutton, .FormTable1 td .formbutton {
   background-color: #E79824;
+  border: none;
   color: #fff;
+  height: inherit;
   text-align: center;
   padding: 1em 2em;
   font-weight: bold; }
 
+.formbutton:hover, .FormTable1 td .formbutton:hover {
+  background-color: #EDAF59; }
+
 .FormTable1 td {
   text-align: left;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  padding: 1em 2em; }
   .FormTable1 td input, .FormTable1 td select {
+    height: 32px; }
+  .FormTable1 td input, .FormTable1 td select, .FormTable1 td textarea {
     background: #fff;
-    border: medium none;
+    border: 1px solid #e3e3e3;
     border-radius: 0;
-    color: #999;
+    color: #666;
     font-size: 13px;
-    height: 32px;
     line-height: 32px;
     margin: 0;
     padding: 0 15px;
     width: 100%; }
+  .FormTable1 td #rememberme {
+    display: inline;
+    width: inherit;
+    height: inherit; }
 
+.redalert {
+  display: inline-block;
+  color: #DD1A5D;
+  border-radius: 1px; }
+  .redalert li {
+    list-style-type: none; }
+
+#SpTitleBar {
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline;
+  color: #63CADF; }
+
+/*
+ *
+ *
+ *
+ *
+ Global Page Settings
+ *
+ *
+ *
+ *
+ */
 /* SECONDARY PAGE */
 #right #login {
   background-color: #004A8F; }
@@ -53,8 +110,10 @@
     color: #ffffff; }
 #right #news {
   background-color: #64A24C; }
-  #right #news .irailhead, #right #news .irailcontent {
+  #right #news .irailhead, #right #news .irailcontent, #right #news a {
     color: #ffffff; }
+  #right #news a:hover {
+    color: #63CADF; }
 #right #calendar {
   background-color: #63CADF; }
   #right #calendar .irailhead, #right #calendar .irailcontent, #right #calendar a {
@@ -67,8 +126,13 @@
     position: relative;
     top: 4px; }
 
-.ViewTable1 th {
+.ViewTable1 th, .calloutbox, .infobox {
   background-color: transparent; }
+
+.FormTable1 {
+  width: 454px;
+  display: block;
+  margin: auto; }
 
 /* TOP TOOL BAR AND SEARCH */
 #itoolbar_bg {
@@ -119,6 +183,8 @@
   border-bottom: 6px solid #004A8F; }
 .nav li:hover {
   border-bottom: 6px solid #63CADF; }
+.nav li, .nav a {
+  transition: background-color 0.25s, border-color 0.25s; }
 
 .mainmenu-out, .navbar-toggle {
   background-color: transparent; }
@@ -138,14 +204,18 @@
   padding: 0;
   top: 5px; }
 
+.navbar-collapse {
+  padding: 0px; }
+
 /* PAGE CONTENT */
 #hp-main .content, #hp-main p {
   text-align: left;
   line-height: 1.5em;
   font-size: 1.1em; }
 #hp-main .content p {
+  font-family: 'PT Sans Narrow', sans-serif;
   color: #666; }
-#hp-main .zone, #hp-main .irailhead {
+#hp-main .zone, #hp-main .irailhead, #hp-main #bottomcontentarea {
   background-color: transparent; }
 #hp-main .irailhead {
   font-size: 1.5em;
@@ -161,11 +231,16 @@
   bottom: 15px; }
   #hp-main .bottom-left-out p, #hp-main .bottom-left-out a {
     color: #ffffff; }
+#hp-main #news .irailcontent {
+  color: #ffffff; }
 #hp-main #news a {
   font-size: 0.7em; }
 
-@media (max-width: 600px) {
+@media (max-width: 769px) {
   #PageBody {
-    margin-top: 74px; } }
+    margin-top: 74px; }
+
+  .FormTable1 {
+    width: 225px; } }
 
 /*# sourceMappingURL=output.css.map */
