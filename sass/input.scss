@@ -8,6 +8,8 @@ $secondary_blue:#63CADF;
 $secondary_gold:#E79824;
 $secondary_gold_light:#EDAF59;
 $secondary_pink:#DD1A5D;
+
+$secondary_grey_light:#A1A3A6;
 $paragraph_color_dark:#666;
 
 /* MARGINS */
@@ -128,6 +130,20 @@ a:hover {
     text-decoration: underline;
     color:$secondary_blue;
 }
+#bottomcontentarea {
+    background-color:transparent;
+}
+
+// hide top center space
+.hp-center-out { display: none; }
+
+.video_player {
+    width:100%;
+    min-width: 275px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
 /*
  *
  *
@@ -188,6 +204,24 @@ a:hover {
     width:454px;
     display: block;
     margin: auto;
+}
+#CustomPageBody {
+    div {
+        padding-bottom:10em;
+        // vertical-align: middle;
+    }
+    p, ul {
+        line-height: 27px;
+        font-size: 1.5em;
+    }
+}
+.about_us {
+    p, h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+    }
+    i {
+        font-size:5em;
+    }
 }
 
 
@@ -255,7 +289,6 @@ a:hover {
 
 
 
-
 /* NAV BAR */
 .navbar-collapse, .dropdown-menu {
     background-color: $primary-color;
@@ -275,6 +308,9 @@ a:hover {
     background-color:transparent;
 }
 #mainmenu {
+    font-size:1.2em;
+    text-align: left;
+    background-color: $secondary_grey_light;
     a {
         font-weight: bold;
         text-transform: uppercase;
@@ -312,19 +348,24 @@ a:hover {
     .content, p {
         text-align:left;
         line-height: 1.5em;
-	    font-size: 1.1em;
+	    font-size: 1.2em;
     }
     .content p {
         font-family: 'PT Sans Narrow', sans-serif;
         color:$paragraph_color_dark;
     }
 
-    .zone, .irailhead, #bottomcontentarea {
+    .zone, .irailhead {
     	background-color:transparent;
     }
     .irailhead {
         font-size: 1.5em;
         line-height: 56px;
+    }
+    .bottomcontentarea {
+        img:hover {
+            opacity: 80%;
+        }
     }
     .calendar {
         background-color:#ffffff;
@@ -349,15 +390,41 @@ a:hover {
             font-size: 0.7em;
         }
     }
+    .hero-site-heading {
+        font-size:3em;
+        font-weight: bold;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
 
 }
 
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
 	#PageBody {
 	    margin-top: 74px;
 	}
     .FormTable1 {
         width:225px;
+    }
+    .container {
+        padding-left:0;
+        padding-right:0;
+    }
+    #mainmenu {
+        ul {
+            padding: 1em;
+            font-size: 1.5em;
+        }
+    }
+    .bottom-left-out {
+        img {
+            width: 112%;
+            display: block;
+            margin: auto;
+            position: relative;
+            right: 20px;
+            bottom: 15px;
+        }
     }
 }

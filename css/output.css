@@ -92,6 +92,19 @@ a:hover {
   text-decoration: underline;
   color: #63CADF; }
 
+#bottomcontentarea {
+  background-color: transparent; }
+
+.hp-center-out {
+  display: none; }
+
+.video_player {
+  width: 100%;
+  min-width: 275px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
 /*
  *
  *
@@ -133,6 +146,17 @@ a:hover {
   width: 454px;
   display: block;
   margin: auto; }
+
+#CustomPageBody div {
+  padding-bottom: 10em; }
+#CustomPageBody p, #CustomPageBody ul {
+  line-height: 27px;
+  font-size: 1.5em; }
+
+.about_us p, .about_us h1, .about_us h2, .about_us h3, .about_us h4, .about_us h5, .about_us h6 {
+  text-align: center; }
+.about_us i {
+  font-size: 5em; }
 
 /* TOP TOOL BAR AND SEARCH */
 #itoolbar_bg {
@@ -189,15 +213,19 @@ a:hover {
 .mainmenu-out, .navbar-toggle {
   background-color: transparent; }
 
-#mainmenu a {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-decoration: none; }
-#mainmenu a:hover {
-  background-color: #4267A3; }
-#mainmenu .caret {
-  display: none; }
+#mainmenu {
+  font-size: 1.2em;
+  text-align: left;
+  background-color: #A1A3A6; }
+  #mainmenu a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none; }
+  #mainmenu a:hover {
+    background-color: #4267A3; }
+  #mainmenu .caret {
+    display: none; }
 
 .dropdown-menu {
   text-align: left;
@@ -211,15 +239,17 @@ a:hover {
 #hp-main .content, #hp-main p {
   text-align: left;
   line-height: 1.5em;
-  font-size: 1.1em; }
+  font-size: 1.2em; }
 #hp-main .content p {
   font-family: 'PT Sans Narrow', sans-serif;
   color: #666; }
-#hp-main .zone, #hp-main .irailhead, #hp-main #bottomcontentarea {
+#hp-main .zone, #hp-main .irailhead {
   background-color: transparent; }
 #hp-main .irailhead {
   font-size: 1.5em;
   line-height: 56px; }
+#hp-main .bottomcontentarea img:hover {
+  opacity: 80%; }
 #hp-main .calendar {
   background-color: #ffffff;
   box-shadow: 2px 5px 4px rgba(37, 37, 37, 0.36); }
@@ -235,12 +265,33 @@ a:hover {
   color: #ffffff; }
 #hp-main #news a {
   font-size: 0.7em; }
+#hp-main .hero-site-heading {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 35px;
+  margin-bottom: 10px; }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   #PageBody {
     margin-top: 74px; }
 
   .FormTable1 {
-    width: 225px; } }
+    width: 225px; }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0; }
+
+  #mainmenu ul {
+    padding: 1em;
+    font-size: 1.5em; }
+
+  .bottom-left-out img {
+    width: 112%;
+    display: block;
+    margin: auto;
+    position: relative;
+    right: 20px;
+    bottom: 15px; } }
 
 /*# sourceMappingURL=output.css.map */
